@@ -1,0 +1,179 @@
+:root{
+    --ff1 : 'Open Sans', sans-serif;
+    --brand : #ffc155;
+    --brand2 : #709dca;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    vertical-align: middle;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.h-100{
+    height: 100%;
+}
+
+/* ==================
+    common css end
+=================== */
+
+
+#gallery .gallery-menu{
+    margin-top: 50px;
+}
+
+#gallery .gallery-menu ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#gallery .gallery-menu ul li{
+   text-transform: capitalize;
+   font-family: var(--ff1);
+   font-weight: 400;
+   font-size: 15px;
+   padding: 0 20px;
+   margin-right: 20px;
+   color: #062033;
+   cursor: pointer;
+}
+
+#gallery .gallery-menu ul li.active{
+    background-color: var(--brand2);
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#gallery .gallery-menu ul li:last-child{
+    margin-right: 0;
+}
+
+#gallery .gallery-main{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+#gallery .gallery-main .gallery-item{
+    width: 25%;
+    position: relative;
+}
+
+#gallery .gallery-main .gallery-item img{
+    width: 100%;
+}
+
+#gallery .gallery-main .gallery-item .gallery-overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 193, 85, 0.9);
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all linear 0.4s;
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+}
+
+#gallery .gallery-main .gallery-item:hover .gallery-overlay{
+    opacity: 1;
+}
+
+#gallery .gallery-main .gallery-item .gallery-overlay .icon a i{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: #fff;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    line-height: 37px;
+    text-align: center;
+}
+
+#gallery .gallery-main .gallery-item .gallery-overlay h5{
+    color: #fff;
+    font-size: 17px;
+    font-family: var(--ff1);
+    font-weight: 700;
+
+}
+
+#gallery .gallery-main .gallery-item .gallery-overlay p{
+    color: #fff;
+    font-size: 17px;
+    font-family: var(--ff1);
+    font-weight: 400;
+}
+
+/* #gallery .vbox-next{
+    background-color: var(--brand2);
+} */
+
+/* ==================
+    gallery css end
+=================== */
+
+
+#vdeo{
+    height: 500px;
+    background: url(../images/video.jpg) no-repeat center / cover;
+    position: relative;
+    margin-top: 90px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#vdeo::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+#vdeo .icon i{
+    font-size: 50px;
+    color: #fff;   
+}
+
+/* ==================
+    vdeo css end
+=================== */
